@@ -1,5 +1,9 @@
 function App() {
-  return <h1 className="font-bold text-red-500 text-2xl">Hello world</h1>;
+  return (
+    <h1 className="font-semibold text-red-500 text-3xl font-main">
+      Body Mass Index Calculator
+    </h1>
+  );
 }
 
 export default App;
