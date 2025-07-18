@@ -1,8 +1,10 @@
 import pageLogo from './assets/images/logo.svg';
+import { HeroImage } from './components/HeroImage';
 
 function App() {
   return (
     <main className="font-main">
+      <HeroImage />
       <section className="px-6 pt-8">
         <header className="text-center flex flex-col items-center gap-8">
           <img src={pageLogo} alt="Page logo" className="w-9 h-9" />
