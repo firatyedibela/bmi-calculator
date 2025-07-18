@@ -47,3 +47,13 @@
     @apply text-[14px] leading-[150%];
   }
 }
+
+.hero {
+  background: #ffffff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(214, 252, 254, 0.5) 50%,
+    rgba(214, 230, 254, 1) 100%
+  );
+}
