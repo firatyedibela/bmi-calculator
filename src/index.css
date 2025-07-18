@@ -9,4 +9,11 @@
 
 @theme {
   --font-main: 'Inter';
+
+  --color-grey-500: #5e6e85;
+  --color-grey-300: #acc1de;
+  --color-blue-900: #253347;
+  --color-blue-500: #345ff6;
+  --color-blue-300: #b3d3f1;
+  --color-blue-100: #e1e7fe;
 }
