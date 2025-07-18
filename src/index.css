@@ -17,3 +17,33 @@
   --color-blue-300: #b3d3f1;
   --color-blue-100: #e1e7fe;
 }
+
+@layer components {
+  .text-preset-1 {
+    @apply text-[64px] font-semibold leading-[110%] tracking-[-0.05em];
+  }
+
+  .text-preset-2 {
+    @apply text-[48px] font-semibold leading-[110%] tracking-[-0.05em];
+  }
+
+  .text-preset-3 {
+    @apply text-[32px] font-semibold leading-[110%] tracking-[-0.05em];
+  }
+
+  .text-preset-4 {
+    @apply text-[24px] font-semibold leading-[120%] tracking-[-0.05em];
+  }
+
+  .text-preset-5 {
+    @apply text-[20px] font-semibold leading-[120%] tracking-[-0.05em];
+  }
+
+  .text-preset-6 {
+    @apply text-[16px] leading-[150%];
+  }
+
+  .text-preset-7 {
+    @apply text-[14px] leading-[150%];
+  }
+}
