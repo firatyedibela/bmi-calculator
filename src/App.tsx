@@ -1,5 +1,6 @@
 import pageLogo from './assets/images/logo.svg';
 import { HeroImage } from './components/HeroImage';
+import { BmiCard } from './components/BmiCard';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           </div>
         </header>
       </section>
+      <BmiCard />
     </main>
   );
 }
