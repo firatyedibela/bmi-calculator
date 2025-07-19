@@ -1,4 +1,4 @@
-import { calculateImperialWeight } from '../utils/calculateImperialWeight';
+import { getImperialWeight } from '../utils/getImperialWeight';
 
 type BmiResultCardProps = {
   bmiValue: number | null;
@@ -25,8 +25,8 @@ export const BmiResultCard = ({
   };
 
   if (unitSystem === 'imperial') {
-    imperialWeightRange.max = calculateImperialWeight(maxWeight);
-    imperialWeightRange.min = calculateImperialWeight(minWeight);
+    imperialWeightRange.max = getImperialWeight(maxWeight);
+    imperialWeightRange.min = getImperialWeight(minWeight);
   }
 
   return (
