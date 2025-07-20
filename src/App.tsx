@@ -1,11 +1,12 @@
 import pageLogo from './assets/images/logo.svg';
 import { HeroImage } from './components/HeroImage';
 import { BmiCard } from './components/BmiCard';
+import iconEating from './assets/images/image-man-eating.webp';
+import curvedLineLeft from './assets/images/pattern-curved-line-left.svg';
 
 function App() {
   return (
-    <div className="wrapper pt-8 xl:pt-22">
-      <HeroImage />
+    <div className="wrapper pt-8 xl:pt-22 relative">
       <header className="max-w-[1160px] m-auto flex flex-col items-center xl:items-start gap-8 md:gap-10 xl:mb-6">
         <img
           src={pageLogo}
@@ -13,8 +14,9 @@ function App() {
           className="w-9 h-9 xl:w-16 xl:h-16 xl:block "
         />
       </header>
-      <main className="font-main">
-        <section className="max-w-[768px] xl:max-w-[1160px] px-6 sm:px-10 py-8 xl:p-0 m-auto flex flex-col gap-8 md:gap-10 xl:flex-row xl:gap-8">
+      <main className="font-main max-w-[1160px] m-auto">
+        <section className="max-w-[768px] xl:max-w-full px-6 sm:px-10 py-8 xl:p-0 m-auto flex flex-col gap-8 md:gap-10 xl:flex-row xl:gap-8 xl:mb-[120px]">
+          <HeroImage />
           <div className="flex flex-col gap-6 xl:flex-1 xl:pt-18 xl:gap-8">
             <h1 className="text-preset-2 xl:text-[64px] text-blue-900 text-center xl:text-start max-w-[350px] xl:max-w-[460px] m-auto xl:m-0">
               Body Mass Index Calculator
@@ -27,6 +29,32 @@ function App() {
             </p>
           </div>
           <BmiCard />
+        </section>
+        <section className="bmi-info-section m-auto flex flex-col items-center gap-12 md:flex-row md:gap-18 relative pb-15 xl:px-0 xl:pb-20 xl:pt-13 xl:items-end">
+          <div className="hidden xl:block xl:absolute right-8 top-0">
+            <img src={curvedLineLeft} alt="curved line" />
+          </div>
+          <div className="max-w-[435px] xl:max-w-[564px] md:w-[319px] md:h-[411px] xl:h-[auto]">
+            <img
+              src={iconEating}
+              alt="Image of a man eating sushi"
+              className="md:w-full md:h-full md:object-cover md:object-right"
+            />
+          </div>
+          <div className="bmi-info flex flex-col gap-8 px-6 md:w-[331px] xl:max-w-[465px] md:p-0 xl:mb-12">
+            <h2 className="text-preset-3 text-blue-900 xl:text-[48px]">
+              What your BMI result means
+            </h2>
+            <p className="text-preset-6 text-grey-500 ">
+              A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+              Maintaining a healthy weight may lower your chances of
+              experiencing health issues later on, such as obesity and type 2
+              diabetes. Aim for a nutritious diet with reduced fat and sugar
+              content, incorporating ample fruits and vegetables. Additionally,
+              strive for regular physical activity, ideally about 30 minutes
+              daily for five days a week.
+            </p>
+          </div>
         </section>
       </main>
     </div>
