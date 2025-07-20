@@ -35,7 +35,9 @@ export const BmiResultCard = ({
         <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center ">
           <div className="flex flex-col gap-2 flex-1">
             <span className="text-preset-6">Your BMI is...</span>
-            <span className="text-preset-2">{bmiValue?.toFixed(1)}</span>
+            <span className="text-preset-2 xl:text-[64px]">
+              {bmiValue?.toFixed(1)}
+            </span>
           </div>
 
           {unitSystem === 'metric' ? (

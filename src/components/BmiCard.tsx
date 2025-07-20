@@ -64,7 +64,7 @@ export const BmiCard = () => {
   }
 
   return (
-    <div className="p-6 sm:p-8 flex flex-col gap-6 sm:gap-8 bg-white rounded-xl m-auto shadow-2xl">
+    <div className="p-6 sm:p-8 flex flex-col gap-6 sm:gap-8 bg-white rounded-xl m-auto shadow-2xl xl:w-[564px]">
       <header>
         <h2 className="text-preset-4 text-blue-900">
           Enter your details below
