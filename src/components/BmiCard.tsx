@@ -16,7 +16,11 @@ type FormFields = {
 };
 
 export const BmiCard = () => {
-  const methods = useForm<FormFields>();
+  const methods = useForm<FormFields>({
+    defaultValues: {
+      unitSystem: 'metric',
+    },
+  });
   const { register, watch } = methods;
 
   const [
