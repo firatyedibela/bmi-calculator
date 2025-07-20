@@ -30,11 +30,14 @@ export const BmiResultCard = ({
   }
 
   return (
-    <div className="w-[280px] p-8 bg-blue-500 rounded-[16px] flex flex-col gap-6 text-white">
+    <div className="w-[280px] p-8 bg-blue-500 rounded-[16px] flex flex-col gap-4 text-white">
       {!!bmiValue ? (
-        <div className="flex flex-col gap-2">
-          <span className="text-preset-6">Your BMI is...</span>
-          <span className="text-preset-2">{bmiValue?.toFixed(1)}</span>
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
+            <span className="text-preset-6">Your BMI is...</span>
+            <span className="text-preset-2">{bmiValue?.toFixed(1)}</span>
+          </div>
+
           {unitSystem === 'metric' ? (
             <p className="text-preset-7">
               Your BMI suggests you’re a healthy weight. Your ideal weight is
