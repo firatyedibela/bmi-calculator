@@ -63,58 +63,68 @@ export const BmiCard = () => {
   }
 
   return (
-    <div className="p-6 flex flex-col gap-8 max-w-82 bg-white rounded-xl mt-10 m-auto shadow-xl">
+    <div className="p-6 flex flex-col gap-6 max-w-82 bg-white rounded-xl mt-10 m-auto shadow-2xl">
       <header>
         <h2 className="text-preset-4 text-blue-900">
           Enter your details below
         </h2>
       </header>
       <FormProvider {...methods}>
-        <form className="flex flex-col gap-8 w-full">
-          <fieldset className="flex gap-4">
-            <label className="flex items-center gap-4 cursor-pointer">
+        <form className="flex flex-col gap-6 w-full">
+          <fieldset className="flex gap-6">
+            <label className="flex items-center gap-4 cursor-pointer flex-1">
               <input
                 type="radio"
                 value="metric"
                 {...register('unitSystem', { required: true })}
-                className="appearance-none"
+                className="appearance-none sr-only"
               />
               <RadioIcon isSelected={unitSystem === 'metric'} />
-              Metric
+              <span className="text-preset-6 font-semibold text-blue-900">
+                Metric
+              </span>
             </label>
-            <label className="flex items-center gap-4 cursor-pointer">
+            <label className="flex items-center gap-4 cursor-pointer flex-1">
               <input
                 type="radio"
                 value="imperial"
                 {...register('unitSystem', { required: true })}
-                className="appearance-none"
+                className="appearance-none sr-only"
               />
               <RadioIcon isSelected={unitSystem === 'imperial'} />
-              Imperial
+              <span className="text-preset-6 font-semibold text-blue-900">
+                Imperial
+              </span>
             </label>
           </fieldset>
-          <fieldset>
-            <legend className="mb-2">Height</legend>
-            {!isImperial ? (
-              <NumberInput unit="cm" name="heightCm" />
-            ) : (
-              <div className="flex gap-4">
-                <NumberInput unit="ft" name="heightFt" />
-                <NumberInput unit="in" name="heightIn" />
-              </div>
-            )}
-          </fieldset>
-          <fieldset>
-            <legend className="mb-2">Weight</legend>
-            {!isImperial ? (
-              <NumberInput unit="kg" name="weightKg" />
-            ) : (
-              <div className="flex gap-4">
-                <NumberInput unit="st" name="weightSt" />
-                <NumberInput unit="lbs" name="weightLbs" />
-              </div>
-            )}
-          </fieldset>
+          <div className="flex flex-col gap-4">
+            <fieldset>
+              <legend className="mb-2 text-preset-7 text-grey-500">
+                Height
+              </legend>
+              {!isImperial ? (
+                <NumberInput unit="cm" name="heightCm" />
+              ) : (
+                <div className="flex gap-4">
+                  <NumberInput unit="ft" name="heightFt" />
+                  <NumberInput unit="in" name="heightIn" />
+                </div>
+              )}
+            </fieldset>
+            <fieldset>
+              <legend className="mb-2 text-preset-7 text-grey-500">
+                Weight
+              </legend>
+              {!isImperial ? (
+                <NumberInput unit="kg" name="weightKg" />
+              ) : (
+                <div className="flex gap-4">
+                  <NumberInput unit="st" name="weightSt" />
+                  <NumberInput unit="lbs" name="weightLbs" />
+                </div>
+              )}
+            </fieldset>
+          </div>
         </form>
       </FormProvider>
 
