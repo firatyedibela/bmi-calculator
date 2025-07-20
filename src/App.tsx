@@ -6,11 +6,11 @@ function App() {
   return (
     <main className="font-main">
       <HeroImage />
-      <section className="px-6 pt-8">
-        <header className="text-center flex flex-col items-center gap-8">
+      <section className="px-6 sm:px-10 py-8 grid gap-8 md:gap-10">
+        <header className="text-center flex flex-col items-center gap-8 md:gap-10">
           <img src={pageLogo} alt="Page logo" className="w-9 h-9" />
           <div className="flex flex-col gap-6">
-            <h1 className="text-preset-2 text-blue-900 lg:text-[64px]">
+            <h1 className="text-preset-2 text-blue-900 text-center max-w-[350px] m-auto">
               Body Mass Index Calculator
             </h1>
             <p className="text-preset-6 text-grey-500">
@@ -21,8 +21,8 @@ function App() {
             </p>
           </div>
         </header>
+        <BmiCard />
       </section>
-      <BmiCard />
     </main>
   );
 }
