@@ -3,6 +3,7 @@ import { useForm, FormProvider } from 'react-hook-form';
 import { NumberInput } from './NumberInput';
 import { getIdealWeightRange } from '../utils/getIdealWeightRange';
 import { getMetricLength } from '../utils/getMetricLength';
+import { RadioIcon } from './RadioIcon';
 
 type FormFields = {
   unitSystem: 'metric' | 'imperial';
@@ -67,21 +68,24 @@ export const BmiCard = () => {
       <FormProvider {...methods}>
         <form className="flex flex-col gap-8 w-full">
           <fieldset className="flex gap-4">
-            <label>
+            <label className="flex items-center gap-4 cursor-pointer">
               <input
                 type="radio"
                 value="metric"
-                checked={!isImperial}
                 {...register('unitSystem', { required: true })}
+                className="appearance-none"
               />
+              <RadioIcon isSelected={unitSystem === 'metric'} />
               Metric
             </label>
-            <label>
+            <label className="flex items-center gap-4 cursor-pointer">
               <input
                 type="radio"
                 value="imperial"
                 {...register('unitSystem', { required: true })}
+                className="appearance-none"
               />
+              <RadioIcon isSelected={unitSystem === 'imperial'} />
               Imperial
             </label>
           </fieldset>
