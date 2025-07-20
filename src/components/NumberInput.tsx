@@ -9,13 +9,13 @@ export const NumberInput = ({ unit, name }: NumberInputProps) => {
   const { register } = useFormContext();
 
   return (
-    <label className="p-6 flex gap-6 border rounded-[12px] cursor-pointer flex-1">
+    <label className="p-6 flex gap-6 border border-grey-500 rounded-[12px] cursor-pointer flex-1">
       <input
         type="number"
-        className="outline-none w-full"
+        className="outline-none w-full text-preset-4 text-blue-900"
         {...register(name, { required: true })}
       />
-      <span>{unit}</span>
+      <span className="text-preset-4 text-blue-500">{unit}</span>
     </label>
   );
 };
