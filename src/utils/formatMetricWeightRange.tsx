@@ -1,4 +1,4 @@
-export const getFormattedMetricRange = (
+export const formatMetricWeightRange = (
   minWeight: number,
   maxWeight: number
 ) => {
