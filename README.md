@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution]()
+- [Solution](https://www.frontendmentor.io/solutions/responsive-bmi-calculator-with-react-and-tailwindcss-7pEbx5NRC2)
 - [Live Site](https://bmi-calculator-plum-eight.vercel.app)
 
 ## My process
