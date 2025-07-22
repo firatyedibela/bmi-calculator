@@ -73,7 +73,7 @@ export const BmiCard = () => {
       <FormProvider {...methods}>
         <form className="flex flex-col gap-6 sm:gap-8 w-full">
           <fieldset className="flex gap-6">
-            <label className="flex items-center gap-4 cursor-pointer flex-1">
+            <label className="unit-option flex items-center gap-4 cursor-pointer flex-1">
               <input
                 type="radio"
                 value="metric"
@@ -85,7 +85,7 @@ export const BmiCard = () => {
                 Metric
               </span>
             </label>
-            <label className="flex items-center gap-4 cursor-pointer flex-1">
+            <label className="unit-option flex items-center gap-4 cursor-pointer flex-1">
               <input
                 type="radio"
                 value="imperial"

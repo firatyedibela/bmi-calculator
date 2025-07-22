@@ -11,12 +11,17 @@ export const RadioIcon = ({ isSelected }: RadioIconProps) => {
     <div
       className={clsx(
         sharedStyles,
-        'bg-blue-100 flex justify-center items-center'
+        'radio-icon-active bg-blue-100 flex justify-center items-center'
       )}
     >
       <div className="w-[15px] h-[15px] rounded-full bg-blue-500"></div>
     </div>
   ) : (
-    <div className={clsx(sharedStyles, 'border border-grey-500')}></div>
+    <div
+      className={clsx(
+        sharedStyles,
+        'radio-icon-inactive border border-grey-500'
+      )}
+    ></div>
   );
 };

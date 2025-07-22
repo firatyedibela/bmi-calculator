@@ -12,7 +12,7 @@ export const NumberInput = ({ unit, name }: NumberInputProps) => {
   return (
     <label
       className={clsx(
-        'p-6 flex gap-6 border border-grey-500 rounded-[12px] cursor-pointer flex-1',
+        'p-6 flex gap-6 border border-grey-500 rounded-[12px] cursor-pointer flex-1 hover:border-blue-500',
         (unit === 'cm' || unit === 'kg') && 'xl:py-4'
       )}
     >
