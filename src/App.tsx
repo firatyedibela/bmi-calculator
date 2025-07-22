@@ -1,6 +1,7 @@
 import pageLogo from './assets/images/logo.svg';
 import { HeroImage } from './components/HeroImage';
 import { BmiCard } from './components/BmiCard';
+import { LimitationsSection } from './components/LimitationsSection';
 import curvedLineLeft from './assets/images/pattern-curved-line-left.svg';
 import manEating from './assets/images/image-man-eating.webp';
 import iconEating from './assets/images/icon-eating.svg';
@@ -100,6 +101,7 @@ function App() {
             </div>
           </section>
         </div>
+        <LimitationsSection />
       </main>
     </div>
   );
